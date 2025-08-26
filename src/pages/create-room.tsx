@@ -11,13 +11,9 @@ export function CreateRoom() {
   async function handleCreateRoom(data: FormData) {
     const theme = data.get("theme")?.toString();
 
-    console.log(theme);
-
     if (!theme) {
       return;
     }
-
-    console.log(theme);
 
     try {
       const { roomId } = await createRoom({ theme });

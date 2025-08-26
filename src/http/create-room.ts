@@ -10,9 +10,6 @@ export async function createRoom({ theme }: CreateRoomRequest) {
     }),
   });
 
-  console.log(`${import.meta.env.VITE_APP_API_URL}`);
-  console.log(response);
-
   const data: { id: string } = await response.json();
 
   return { roomId: data.id };

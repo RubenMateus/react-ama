@@ -26,8 +26,6 @@ export async function getRoomMessages({
     answered: boolean;
   }> = await response.json();
 
-  console.log("data", data);
-
   return {
     messages: data.map((item) => {
       return {

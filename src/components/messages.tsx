@@ -16,8 +16,6 @@ export function Messages() {
     queryFn: async () => await getRoomMessages({ roomId }),
   });
 
-  // console.log(data);
-
   useMessagesWebSockets({ roomId });
 
   const sortedMessages = data.messages.sort((a, b) => {
